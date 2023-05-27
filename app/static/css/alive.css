@@ -1,0 +1,42 @@
+.srv-url {
+    color: #169cee;
+    font-weight: bold;
+}
+.success-row {
+    display: flex;
+    justify-content: center;
+}
+.success-icon-clm {
+    display: flex;
+    margin-right: 1em;
+}
+.success-container {
+    margin: 30px 0 20px;
+    border-top: 1px solid #e2e2e2;
+    padding-top: 30px;
+}
+.success-msg {
+    font-size: 18px;
+    line-height: 24px;
+    color: #57c689;
+    font-weight: bold;
+}
+.success .success-icon {
+    background: #57c689;
+    border-color: #57c689;
+    color: #fff;
+    display: inline-block;
+}
+
+.error-msg {
+    font-size: 18px;
+    line-height: 24px;
+    color: #c65757;
+    font-weight: bold;
+}
+.success .error-icon {
+    background: #c65757;
+    border-color: #c65757;
+    color: #fff;
+    display: inline-block;
+}

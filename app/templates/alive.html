@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>File-Manager Repository</title>
+        <link rel="stylesheet" href="/static/css/style.css"></link>
+        <link rel="stylesheet" href="/static/css/alive.css"></link>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="align-center">
+                <img class="logo" src="/static/images/logo.png">
+            </div>
+
+            <div class="advice align-center">
+                {% if mode and message and status%}
+                    <p class="up-and-running">Looks like our local <span class="srv-url">{{ mode }}</span> {{ message }} <span class="srv-url">{{ status }}</span></p>
+                {% else %}
+                    <p class="up-and-running">Looks like something went wrong!</p>
+                {% endif %}
+
+            </div>
+
+
+            <div class="success-row success" class="success-container">
+                {% if mode and status and (status != 'disconnected' and status != '...') %}
+                    <div class="success-icon-clm align-center">
+                        <span class="icon success-icon">✓</span>
+                    </div>
+                    <div class="">
+                        <p class="success-msg">
+                            Congrats! Local {{ mode }} is working. :)
+                        </p>
+                    </div>
+                {% else %}
+                    <div class="success-icon-clm align-center">
+                        <span class="icon error-icon">X</span>
+                    </div>
+                    <div class="">
+                        <p class="error-msg">
+                            Bad Luck! Local {{ mode }} is not working. :(
+                        </p>
+                    </div>
+                {% endif %}
+            </div>
+
+        </div>
+    </body>
+
+</html>
